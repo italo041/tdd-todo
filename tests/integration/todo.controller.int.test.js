@@ -62,4 +62,20 @@ describe(`Integration tests`, () => {
     expect(res.body.title).toBe(testData.title)
     expect(res.body.done).toBe(testData.done)
   })
+
+  it(`DELETE ${endpointUrl}`, async () => {
+
+    const res = await request(app).delete(endpointUrl + "/" + newTodoId)
+    
+    expect(res.statusCode).toBe(200);
+
+  })
+  it(`DELETE ${endpointUrl} 404`, async () => {
+
+    const res2 = await request(app).get(
+      endpointUrl + "/" + newTodoId
+    );
+
+    expect(res2.statusCode).toBe(404);
+  })
 });
