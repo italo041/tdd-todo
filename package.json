@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "jestrunner.jestCommand": "npm run test --detectOpenHandles"
+    "test": "jest --watchAll --detectOpenHandles "
   },
   "keywords": [],
   "author": "",
